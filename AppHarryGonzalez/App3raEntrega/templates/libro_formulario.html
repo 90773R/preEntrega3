@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <form action="{% url 'AgregarLibros' %}" method="POST">{% csrf_token %}
+        <table>
+            {{mi_formulario.as_table}}
+        </table>
+        <button type="submit"> Agregar </button>
+    </form>
+{% endblock contenidoQCambia %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Vista de películas de Harry
+    </h4>
+    <ul>
+        <table>
+        <li>"El Exorcista", "William Firedkin", Terror</li>
+        <li>"El Grito", "Takashi Shimizu", Terror</li>
+        <li>"Interestelar", "Christopher Nolan", Ciencia Ficción</li>
+    </table>
+    </ul>
+
+    <h1>Peliculas agregadas:</h1>
+    <ul>
+    {% for pelicula in peliculas %}
+        <li>{{pelicula.titulo}}</li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoQCambia %}

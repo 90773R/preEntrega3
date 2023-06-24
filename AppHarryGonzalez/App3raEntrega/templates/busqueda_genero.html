@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <form action="{% url 'Buscar' %}" method="GET">{% csrf_token %}
+        <p>Inserte el género de peliculas que queres buscar: <input type="text" name="genero" id=""></p>
+        <button type="submit"> Buscar </button>
+    </form>
+{% endblock contenidoQCambia %}

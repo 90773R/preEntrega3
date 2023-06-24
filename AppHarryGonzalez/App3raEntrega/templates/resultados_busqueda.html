@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <p>Las peliculas que hay de {{genero}} son:</p>
+    
+    {% if peliculas %}
+        <ul>
+            {% for pelicula in peliculas %}
+                <li>
+                    {{pelicula.titulo}} - {{pelicula.genero}}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontró ninguna película con ese género</p>
+    {% endif %}
+        
+{% endblock contenidoQCambia %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Vista de libros de Harry
+    </h4>
+    <ul>
+        <table>
+        <li>"Bleach", "Tite Kubo", manga shonen</li>
+        <li>"Death Note", "Tsugumi Oba y Takeshi Obata", manga drama/suspenso</li>
+        <li>"Monster", "Naoki Urasawa", manga drama/suspenso</li>
+    </table>
+    </ul>
+
+    <h1>Libros agregados:</h1>
+    <ul>
+    {% for libro in libros %}
+        <li>{{libro.titulo}}</li>
+    {% endfor %}
+    </ul>    
+{% endblock contenidoQCambia %}

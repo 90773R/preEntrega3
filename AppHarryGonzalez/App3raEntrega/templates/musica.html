@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Vista de música de Harry
+    </h4>
+    <ul>
+        <table>
+        <li>"Peace Sells... But Who's Buying?", "Megadeth", Thrash Metal</li>
+        <li>"¡Bang! ¡Bang! Estás Liquidado", "Patricio Rey Y Sus Redonditos De Ricota", Rock</li>
+        <li>"Survival", "Bob Marley And The Wailers", Reggae</li>
+    </table>
+    </ul>
+
+    <h1>Música agregada:</h1>
+    <ul>
+    {% for musica in musica %}
+        <li>{{musica.titulo}}</li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoQCambia %}
